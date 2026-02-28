@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WellBuilt Suite - Oilfield Water Hauling Management</title>
     <meta name="description" content="WellBuilt Suite - The complete oilfield water hauling management platform. Tank pulls, water tickets, invoicing, fleet management, and real-time dashboards.">
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/png" href="wellbuilt-logo.png">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
@@ -55,14 +55,13 @@
         }
 
         .nav-brand {
-            font-weight: 800;
-            font-size: 20px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            background: linear-gradient(180deg, #00A8E8 0%, #0077B6 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-brand img {
+            height: 36px;
+            width: auto;
         }
 
         .nav-links {
@@ -125,6 +124,19 @@
             height: 800px;
             background: radial-gradient(circle, rgba(0, 168, 232, 0.06) 0%, transparent 70%);
             pointer-events: none;
+        }
+
+        .hero-logo {
+            width: 120px;
+            height: auto;
+            margin-bottom: 32px;
+            filter: drop-shadow(0 0 40px rgba(0, 168, 232, 0.3));
+            animation: float 4s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
         }
 
         .hero-badge {
@@ -493,15 +505,13 @@
         }
 
         .footer-brand {
-            font-weight: 800;
-            font-size: 14px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            background: linear-gradient(180deg, #00A8E8 0%, #0077B6 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
             margin-bottom: 12px;
+        }
+
+        .footer-brand img {
+            height: 28px;
+            width: auto;
+            opacity: 0.7;
         }
 
         .footer-text {
@@ -606,7 +616,7 @@
 
     <!-- NAV -->
     <nav>
-        <div class="nav-brand">WellBuilt<span class="tm">&trade;</span></div>
+        <div class="nav-brand"><img src="wellbuilt-logo-full.png" alt="WellBuilt Suite"></div>
         <ul class="nav-links">
             <li><a href="#apps">Apps</a></li>
             <li><a href="#features">Features</a></li>
@@ -618,6 +628,7 @@
 
     <!-- HERO -->
     <section class="hero">
+        <img src="wellbuilt-logo.png" alt="WellBuilt" class="hero-logo">
         <div class="hero-badge">Oilfield Water Hauling Management</div>
         <h1>
             One Suite.<br>
@@ -812,7 +823,7 @@
 
     <!-- FOOTER -->
     <footer>
-        <div class="footer-brand">WellBuilt<span class="tm">&trade;</span> Suite</div>
+        <div class="footer-brand"><img src="wellbuilt-logo-full.png" alt="WellBuilt Suite"></div>
         <p class="footer-text">
             &copy; 2026 WellBuilt. All rights reserved.
             &nbsp;&bull;&nbsp;
