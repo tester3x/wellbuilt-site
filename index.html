@@ -321,6 +321,13 @@
             opacity: 1;
         }
 
+        .app-logo {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            margin-bottom: 24px;
+        }
+
         .app-icon {
             width: 56px;
             height: 56px;
@@ -649,7 +656,7 @@
     <section class="stats">
         <div class="stats-grid">
             <div>
-                <div class="stat-number">5</div>
+                <div class="stat-number">6</div>
                 <div class="stat-label">Connected Apps</div>
             </div>
             <div>
@@ -678,21 +685,22 @@
         <div class="apps-grid">
             <!-- WB Suite -->
             <div class="app-card">
-                <div class="app-icon">&#128241;</div>
+                <img src="wb-suite.png" alt="WellBuilt Suite" class="app-logo">
                 <div class="app-name">WellBuilt Suite</div>
                 <span class="app-tag tag-live">Live</span>
                 <p class="app-desc">The hub app on every driver's phone. One login, access to everything.</p>
                 <ul class="app-features">
                     <li>Single sign-on to all WellBuilt apps</li>
                     <li>Driver registration &amp; company assignment</li>
-                    <li>Quick-launch to Tickets, Mobile, and more</li>
+                    <li>Shift tracking &amp; end-of-day summary</li>
+                    <li>Real-time timesheet view</li>
                     <li>Works on iOS and Android</li>
                 </ul>
             </div>
 
             <!-- WB Tickets -->
             <div class="app-card">
-                <div class="app-icon">&#128196;</div>
+                <img src="wb-tickets.png" alt="WellBuilt Tickets" class="app-logo">
                 <div class="app-name">WellBuilt Tickets</div>
                 <span class="app-tag tag-live">Live</span>
                 <p class="app-desc">Digital water tickets and invoicing. No more paper. No more lost tickets.</p>
@@ -701,14 +709,14 @@
                     <li>Invoice management &amp; ticket grouping</li>
                     <li>Bluetooth thermal printing in the field</li>
                     <li>GPS timeline tracking per load</li>
-                    <li>Split ticket support for shared wells</li>
+                    <li>Dispatch job drawer &amp; messaging</li>
                     <li>Company-branded tickets &amp; invoices</li>
                 </ul>
             </div>
 
             <!-- WB Mobile -->
             <div class="app-card">
-                <div class="app-icon">&#128202;</div>
+                <img src="wb-mobile.png" alt="WellBuilt Mobile" class="app-logo">
                 <div class="app-name">WellBuilt Mobile</div>
                 <span class="app-tag tag-live">Live</span>
                 <p class="app-desc">Tank level pulls and well performance. See what's in the tank before you roll.</p>
@@ -722,18 +730,34 @@
             </div>
         </div>
 
-        <!-- Coming Soon Row -->
-        <div class="apps-grid" style="margin-top: 24px; grid-template-columns: repeat(2, 1fr); max-width: 800px; margin-left: auto; margin-right: auto;">
+        <!-- Second Row -->
+        <div class="apps-grid" style="margin-top: 24px;">
+            <!-- WB JSA -->
+            <div class="app-card">
+                <img src="wb-jsa.png" alt="WellBuilt JSA" class="app-logo">
+                <div class="app-name">WellBuilt JSA</div>
+                <span class="app-tag tag-live">Live</span>
+                <p class="app-desc">Electronic Job Safety Analysis. Step-through safety checklists before every job.</p>
+                <ul class="app-features">
+                    <li>9-step hazard &amp; controls checklist</li>
+                    <li>PPE verification</li>
+                    <li>Digital sign-off with signature</li>
+                    <li>PDF generation &amp; storage</li>
+                    <li>DOT compliance ready</li>
+                </ul>
+            </div>
+
             <!-- WB Billing -->
             <div class="app-card">
                 <div class="app-icon">&#128176;</div>
                 <div class="app-name">WellBuilt Billing</div>
-                <span class="app-tag tag-soon">Coming Soon</span>
-                <p class="app-desc">Accounts receivable and payable. Build and send bills directly from ticket data.</p>
+                <span class="app-tag tag-live">Live</span>
+                <p class="app-desc">Accounts receivable built from ticket data. Bill oil companies directly.</p>
                 <ul class="app-features">
-                    <li>Auto-generate invoices from water tickets</li>
-                    <li>Bill oil companies directly</li>
-                    <li>Track payments &amp; aging</li>
+                    <li>Auto-generate bills from water tickets</li>
+                    <li>6 fuel surcharge methods (DOE-auto)</li>
+                    <li>EIA diesel price auto-fetch</li>
+                    <li>Payment tracking &amp; aging</li>
                 </ul>
             </div>
 
@@ -741,12 +765,13 @@
             <div class="app-card">
                 <div class="app-icon">&#128181;</div>
                 <div class="app-name">WellBuilt Payroll</div>
-                <span class="app-tag tag-soon">Coming Soon</span>
+                <span class="app-tag tag-live">Live</span>
                 <p class="app-desc">Driver timesheets built automatically from ticket and invoice data. No double entry.</p>
                 <ul class="app-features">
-                    <li>Real-time timesheet building</li>
-                    <li>Driver approval workflow</li>
-                    <li>Exportable payroll reports</li>
+                    <li>Real-time timesheet on driver's phone</li>
+                    <li>Per-county frost zone rates</li>
+                    <li>Rate sheets &amp; employee splits</li>
+                    <li>Multi-driver payroll summary</li>
                 </ul>
             </div>
         </div>
