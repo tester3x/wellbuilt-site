@@ -397,6 +397,145 @@
             flex-shrink: 0;
         }
 
+        /* ============ PACKAGES SECTION ============ */
+        .packages {
+            padding: 120px 20px;
+            background: linear-gradient(180deg, #080808 0%, var(--dark) 100%);
+        }
+
+        .packages-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .pkg-card {
+            background: var(--dark-card);
+            border: 1px solid var(--dark-border);
+            border-radius: 16px;
+            padding: 32px 28px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .pkg-card:hover {
+            border-color: rgba(0, 168, 232, 0.3);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+        }
+
+        .pkg-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--gold), var(--gold-dim));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .pkg-card:hover::before {
+            opacity: 1;
+        }
+
+        .pkg-badge {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            margin: 0 auto 20px;
+        }
+
+        .pkg-emoji {
+            font-size: 56px;
+            margin-bottom: 20px;
+            line-height: 1;
+        }
+
+        .pkg-name {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .pkg-industry {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 12px;
+        }
+
+        .pkg-desc {
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .pkg-types {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            justify-content: center;
+            margin-bottom: 16px;
+        }
+
+        .pkg-type-tag {
+            padding: 4px 10px;
+            border-radius: 50px;
+            font-size: 11px;
+            font-weight: 500;
+            background: rgba(255, 255, 255, 0.06);
+            color: var(--text-muted);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .pkg-unit {
+            font-size: 12px;
+            color: var(--text-muted);
+            opacity: 0.6;
+        }
+
+        .pkg-status {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 50px;
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-top: 12px;
+        }
+
+        .pkg-live {
+            background: rgba(34, 197, 94, 0.15);
+            color: #22c55e;
+        }
+
+        .pkg-coming {
+            background: rgba(0, 168, 232, 0.15);
+            color: var(--gold);
+        }
+
+        @media (max-width: 900px) {
+            .packages-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .packages-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         /* ============ FEATURES SECTION ============ */
         .features {
             padding: 120px 20px;
@@ -626,6 +765,7 @@
         <div class="nav-brand"><img src="wellbuilt-logo-full.png" alt="WellBuilt Suite"></div>
         <ul class="nav-links">
             <li><a href="#apps">Apps</a></li>
+            <li><a href="#packages">Packages</a></li>
             <li><a href="#features">Features</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -790,6 +930,123 @@
                     <li>Secure on-device storage</li>
                     <li>Quick access from WellBuilt Suite</li>
                 </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- PACKAGES -->
+    <section class="packages" id="packages">
+        <div class="section-header">
+            <div class="section-label">Job Packages</div>
+            <h2 class="section-title">Preconfigured. Ready to Work.</h2>
+            <p class="section-sub">Pick your industry. Job types, ticket fields, and receipt layouts are already built. Install a package and start hauling.</p>
+        </div>
+
+        <div class="packages-grid">
+            <!-- Water Hauling -->
+            <div class="pkg-card">
+                <img src="water-hauling.png" alt="Water Hauling" class="pkg-badge">
+                <div class="pkg-name">Water Hauling</div>
+                <div class="pkg-industry">Oil &amp; Gas</div>
+                <p class="pkg-desc">Production water, fresh water, flowback, and frac water. NDIC well integration, SWD routing, level tracking, and split haul support.</p>
+                <div class="pkg-types">
+                    <span class="pkg-type-tag">Production Water</span>
+                    <span class="pkg-type-tag">Fresh Water</span>
+                    <span class="pkg-type-tag">Flowback</span>
+                    <span class="pkg-type-tag">Frac Water</span>
+                    <span class="pkg-type-tag">Service Work</span>
+                </div>
+                <div class="pkg-unit">Measured in BBL</div>
+                <div><span class="pkg-status pkg-live">Live</span></div>
+            </div>
+
+            <!-- Aggregate -->
+            <div class="pkg-card">
+                <img src="aggregate.png" alt="Aggregate Hauling" class="pkg-badge">
+                <div class="pkg-name">Aggregate</div>
+                <div class="pkg-industry">Construction</div>
+                <p class="pkg-desc">Gravel, sand, scoria, and topsoil hauling. Weight tickets, material type tracking, source/delivery site management, and net tonnage calculations.</p>
+                <div class="pkg-types">
+                    <span class="pkg-type-tag">Delivery</span>
+                    <span class="pkg-type-tag">Backhaul</span>
+                </div>
+                <div class="pkg-unit">Measured in TON</div>
+                <div><span class="pkg-status pkg-live">Live</span></div>
+            </div>
+
+            <!-- Oil Hauling -->
+            <div class="pkg-card">
+                <img src="oil-hauling.png" alt="Oil Hauling" class="pkg-badge">
+                <div class="pkg-name">Oil Hauling</div>
+                <div class="pkg-industry">Oil &amp; Gas</div>
+                <p class="pkg-desc">Crude oil BOL with full chain of custody. API gravity, BS&amp;W, temperature readings, seal numbers, and consignor/consignee tracking.</p>
+                <div class="pkg-types">
+                    <span class="pkg-type-tag">Crude Oil</span>
+                    <span class="pkg-type-tag">Condensate</span>
+                    <span class="pkg-type-tag">NGL</span>
+                </div>
+                <div class="pkg-unit">Measured in BBL</div>
+                <div><span class="pkg-status pkg-coming">Coming Soon</span></div>
+            </div>
+
+            <!-- Hot Shot -->
+            <div class="pkg-card">
+                <img src="hot-shot.png" alt="Hot Shot" class="pkg-badge">
+                <div class="pkg-name">Hot Shot</div>
+                <div class="pkg-industry">General</div>
+                <p class="pkg-desc">Equipment delivery, parts runs, and rush jobs. Per-trip and hourly billing, load descriptions, and delivery confirmation with photo capture.</p>
+                <div class="pkg-types">
+                    <span class="pkg-type-tag">Equipment Delivery</span>
+                    <span class="pkg-type-tag">Parts Run</span>
+                    <span class="pkg-type-tag">Rush Job</span>
+                </div>
+                <div class="pkg-unit">Per trip or hourly</div>
+                <div><span class="pkg-status pkg-coming">Coming Soon</span></div>
+            </div>
+
+            <!-- Vacuum Truck -->
+            <div class="pkg-card">
+                <img src="vacuum-truck.png" alt="Vacuum Truck" class="pkg-badge">
+                <div class="pkg-name">Vacuum Truck</div>
+                <div class="pkg-industry">Oilfield Services</div>
+                <p class="pkg-desc">Vacuum services with hybrid billing. Track both hours on-site and volume pumped. Spill cleanup, tank cleanout, and line work support.</p>
+                <div class="pkg-types">
+                    <span class="pkg-type-tag">Vac Service</span>
+                    <span class="pkg-type-tag">Tank Cleanout</span>
+                    <span class="pkg-type-tag">Spill Cleanup</span>
+                </div>
+                <div class="pkg-unit">Hours + BBL</div>
+                <div><span class="pkg-status pkg-coming">Coming Soon</span></div>
+            </div>
+
+            <!-- Hot Oiler -->
+            <div class="pkg-card">
+                <img src="hot-oiler.png" alt="Hot Oiler" class="pkg-badge">
+                <div class="pkg-name">Hot Oiler</div>
+                <div class="pkg-industry">Oil &amp; Gas</div>
+                <p class="pkg-desc">Paraffin treatment and flowline maintenance. Hourly billing with mileage, temperature logging, wellhead and flowline job tracking.</p>
+                <div class="pkg-types">
+                    <span class="pkg-type-tag">Paraffin Treatment</span>
+                    <span class="pkg-type-tag">Flowline Thaw</span>
+                    <span class="pkg-type-tag">Wellhead Service</span>
+                </div>
+                <div class="pkg-unit">Hourly + mileage</div>
+                <div><span class="pkg-status pkg-coming">Coming Soon</span></div>
+            </div>
+
+            <!-- LTL / Dedicated -->
+            <div class="pkg-card">
+                <img src="ltl.png" alt="LTL / Dedicated" class="pkg-badge">
+                <div class="pkg-name">LTL / Dedicated</div>
+                <div class="pkg-industry">Freight</div>
+                <p class="pkg-desc">Less-than-truckload and dedicated lane management. BOL tracking, stop-by-stop delivery confirmation, and per-mile or per-stop billing.</p>
+                <div class="pkg-types">
+                    <span class="pkg-type-tag">LTL Delivery</span>
+                    <span class="pkg-type-tag">Dedicated Lane</span>
+                    <span class="pkg-type-tag">Multi-Stop</span>
+                </div>
+                <div class="pkg-unit">Per mile / per stop</div>
+                <div><span class="pkg-status pkg-coming">Coming Soon</span></div>
             </div>
         </div>
     </section>
