@@ -1,0 +1,10 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["93VB7DY33R.com.wellbuilt.print"],
+        "components": [{"/": "/wbp/print/"}]
+      }
+    ]
+  }
+}
